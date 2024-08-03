@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>论文阅读10:《MemGuard：Defending against Black-Box Membership Inference Attacks via Adversarial Examples》 - Xtar&#39;s blog</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="Xtar" /><meta name="description" content="1 介绍 成员推理攻击中，攻击者通常训练一个二分类器，输入样本的置信值向量，输出该样本是否为训练集中的成员。成员推理攻击主要利用的是目标模型的过" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.100.2 with theme even" />
+
+
+<link rel="canonical" href="http://xtarblog.github.io/post/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB10/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.b5a744db6de49a86cadafb3b70f555ab443f83c307a483402259e94726b045ff.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="论文阅读10:《MemGuard：Defending against Black-Box Membership Inference Attacks via Adversarial Examples》" />
+<meta property="og:description" content="1 介绍 成员推理攻击中，攻击者通常训练一个二分类器，输入样本的置信值向量，输出该样本是否为训练集中的成员。成员推理攻击主要利用的是目标模型的过" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://xtarblog.github.io/post/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB10/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2022-09-18T16:42:36+08:00" />
+<meta property="article:modified_time" content="2022-09-18T16:42:36+08:00" />
+
+<meta itemprop="name" content="论文阅读10:《MemGuard：Defending against Black-Box Membership Inference Attacks via Adversarial Examples》">
+<meta itemprop="description" content="1 介绍 成员推理攻击中，攻击者通常训练一个二分类器，输入样本的置信值向量，输出该样本是否为训练集中的成员。成员推理攻击主要利用的是目标模型的过"><meta itemprop="datePublished" content="2022-09-18T16:42:36+08:00" />
+<meta itemprop="dateModified" content="2022-09-18T16:42:36+08:00" />
+<meta itemprop="wordCount" content="1716">
+<meta itemprop="keywords" content="成员推理,防御方法," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="论文阅读10:《MemGuard：Defending against Black-Box Membership Inference Attacks via Adversarial Examples》"/>
+<meta name="twitter:description" content="1 介绍 成员推理攻击中，攻击者通常训练一个二分类器，输入样本的置信值向量，输出该样本是否为训练集中的成员。成员推理攻击主要利用的是目标模型的过"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Xtar&#39;s blog</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+
+  
+
+
+</nav>
+
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Xtar&#39;s blog</a>
+</div>
+
+
+
+
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+
+<script type="text/javascript"
+        async
+        src="https://cdn.bootcss.com/mathjax/2.7.3/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\[\[','\]\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+
+MathJax.Hub.Queue(function() {
+    
+    
+    
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+
+<style>
+code.has-jax {
+    font: inherit;
+    font-size: 100%;
+    background: inherit;
+    border: inherit;
+    color: #515151;
+}
+</style>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">论文阅读10:《MemGuard：Defending against Black-Box Membership Inference Attacks via Adversarial Examples》</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2022-09-18 </span>
+        <div class="post-category">
+            <a href="/categories/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/"> 论文阅读 </a>
+            </div>
+          <span class="more-meta"> 约 1716 字 </span>
+          <span class="more-meta"> 预计阅读 4 分钟 </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-介绍">1 介绍</a></li>
+    <li><a href="#2-成员推理攻击的防御">2 成员推理攻击的防御</a></li>
+    <li><a href="#3-memguard">3 MemGuard</a>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#31-符号说明">3.1 符号说明</a></li>
+            <li><a href="#32-防御目标">3.2 防御目标</a></li>
+            <li><a href="#33-memguard">3.3 MemGuard</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#4-总结">4 总结</a></li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <h1 id="1-介绍">1 介绍</h1>
+<p>成员推理攻击中，攻击者通常训练一个二分类器，输入样本的置信值向量，输出该样本是否为训练集中的成员。成员推理攻击主要利用的是目标模型的过拟合。以往针对成员推理攻击的方法有两个关键的限制：(1)没有对置信值向量的正式效用损失保证；(2)实现了次优的隐私效用平衡。
+在这种背景下，作者提出了一种叫做 <strong>MemGuard</strong> 的防御方法，主要思想是在置信值向量中添加一个精心制作的噪声使其变为带噪声的对抗样本，从而使攻击模型判断该样本成员关系的概率为 0.5(random guess).这是<strong>第一个</strong>具有<strong>正式效用损失保证的防御</strong>，以防止<strong>黑盒</strong>成员推断攻击。</p>
+<h1 id="2-成员推理攻击的防御">2 成员推理攻击的防御</h1>
+<p><strong>防御目标：</strong></p>
+<ul>
+<li>攻击者的攻击分类器对目标分类器训练数据集成员/非成员的推断不准确，即保护训练数据集的隐私。</li>
+<li>置信值向量的 utility-loss 是有界的</li>
+</ul>
+<p><strong>现有的方法：</strong></p>
+<ul>
+<li>L1正则化</li>
+<li>Max-min game</li>
+<li>dropout</li>
+<li>Model Steasking</li>
+<li>差分隐私</li>
+</ul>
+<h1 id="3-memguard">3 MemGuard</h1>
+<h3 id="31-符号说明">3.1 符号说明</h3>
+<p><img src="https://s2.loli.net/2022/03/01/YadQP9SrNZsxfcB.png" alt="Pasted image 20220228214021.png"></p>
+<h3 id="32-防御目标">3.2 防御目标</h3>
+<p><img src="https://s2.loli.net/2022/03/01/zglMpA8cxuZnUQK.png" alt="Pasted image 20220228214319.png"></p>
+<p>其中，(1)表示 s 添加噪声 n 后，防御器得到的判断是否为训练集样本的分值尽可能接近 0.5，M 表示将噪声 n 加入 s 的概率。限制条件(2)保证了添加噪声后的样本预测结果和原样本一样，即原查询数据样本的预测标签不改变; 限制条件(3)确保了置信值的变形是有界的(小的); 限制条件(4)确保添加噪声后的置信值向量仍然满足概率分布。</p>
+<h3 id="33-memguard">3.3 MemGuard</h3>
+<ul>
+<li>
+<p><strong>情景1：</strong> $g(s)=0.5$</p>
+<ul>
+<li>以概率1添加噪声向量0的最优随机噪声添加机制</li>
+</ul>
+</li>
+<li>
+<p><strong>情景2：</strong> $g(s) \ne 0.5$</p>
+<ul>
+<li>将噪声空间分为两组，添加第一组噪声后通过g预测是成员的概率为0.5，添加第二组噪声后通过g预测是成员的概率不是0.5</li>
+<li>即：$g(s+n)=0.5$ 是一组; $g(s+n) \ne 0.5$是另一组</li>
+<li>分为两个阶段求解：
+<ul>
+<li>第一：求解代表性的变形尽可能小的噪声向量</li>
+<li>第二：求解随机噪声添加机制的概率</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>第一阶段：提出优化问题(找到 r )</strong></p>
+<p>目标是找到一个噪声向量r满足：(1)置信值向量的效用损失尽可能小；(2)输入噪声置信值向量时 g输出是成员的概率为 0.5.可以转化为如下最优化问题：</p>
+<p><img src="https://s2.loli.net/2022/03/01/ePm8UAHK25vq7Qn.png" alt="Pasted image 20220301110018.png"></p>
+<p><strong>(1) 通过改变变量消除概率分布的限制</strong></p>
+<p>因为目标分类器是一个神经网络，输出层是一个 softmax 层，真正的置信值向量s是一些向量 z 的 softmax 函数输出。z是神经网络倒数第二层的输出，通常称为神经网络的 $logits$.
+对噪声向量建模如下：
+$$
+s+r = softmax(z + e)
+$$
+e 是一个新的向量变量。则原最优化问题可以转化为如下问题：</p>
+<p><img src="https://s2.loli.net/2022/03/01/zVynPkYRZrJKboF.png" alt="Pasted image 20220301110925.png"></p>
+<p>求出上述最优化问题的 e 后，噪声向量 r 如下：
+$$r = softmax(z+e) - softmax(z)$$</p>
+<p><strong>(2) 将限制条件转化为优化问题</strong></p>
+<p>防御者的二分分类器是一个神经网络，其输出层有一个单一的神经元，激活函数为 $sigmoid$，所以限制条件(15)可以转化为：
+$$g(\operatorname{sof} \operatorname{tmax}(\mathrm{z}+\mathbf{e}))=\frac{1}{1+\exp (-h(\operatorname{softmax}(\mathrm{z}+\mathbf{e})))}$$
+再进一步可以转化为：
+$$L1 = |h(softmax(z+e))|$$
+若用 $l$ 表示查询数据的预测标签，即 $l = argmax_j{s_j} = argmax_j{z_j}$，则限制条件(14)意味着 $z_l + e_l$ 是向量 $z+e$ 中最大的项，所以有<img src="https://blog-img-1301528484.cos.ap-nanjing.myqcloud.com/images/image-20220918170209913.png" alt="image-20220918170209913">，更进一步限制条件(14)可以转换为如下损失函数:<br>
+<img src="https://blog-img-1301528484.cos.ap-nanjing.myqcloud.com/images/image-20220918170312421.png" alt="image-20220918170312421"></p>
+<p>所以，最终的优化问题为：<img src="https://blog-img-1301528484.cos.ap-nanjing.myqcloud.com/images/image-20220918170415044.png" alt="image-20220918170415044">
+其中 $L_3 = d(softmax(z), softmax(z+e))$</p>
+<p>算法过程如下所示：</p>
+<p><img src="https://s2.loli.net/2022/03/01/myDneJ3Xh8iTZdK.png" alt="Pasted image 20220301112800.png"></p>
+<p><strong>第二阶段：添加噪声的概率</strong></p>
+<p>在阶段1之后可以得到两个代表性的噪声向量，一个是 $0$，一个是 $r$.在阶段2，假设防御者以p的概率选择噪声向量 $r$，以 1-p 的概率选择噪声向量 0.经过这样的简化，可以把等式 1 中的优化问题转化为下面的优化问题：</p>
+<p><img src="https://s2.loli.net/2022/03/01/KfjLzEbmuJnkAvo.png" alt="Pasted image 20220301162725.png"></p>
+<p>限制条件意味者预期的置信变形是有界的。注意：我们忽略了限制条件(2)(4)(5)，因为两种噪声向量本身就满足这三个限制。上面的优化问题经过分析，可以得到如下解：</p>
+<p><img src="https://s2.loli.net/2022/03/01/cZqrBJRjGi7TxC6.png" alt="Pasted image 20220301163228.png"></p>
+<p><strong>One-time randomness:</strong></p>
+<p>假设攻击者从目标分类器查询同一数据样本 n 次，收到置信值向量 $s_1$ m次，收到置信值向量 $s_2$ n-m 次。一个置信值向量是 s+r, 另一个置信值向量是真实置信值向量为s。由这两个向量，攻击者利用上面的式子可以计算出p。攻击者还可以估计防御者返回的置信值向量 $s_1,s_2$ 的概率分别为: $\frac{m}{n}, \frac{n-m}{n}$.若 $\frac{m}{n}$ 接近于p, 那么攻击者就可以判断 $s_2$ 是真实的置信值向量。</p>
+<p>为了解决这个问题，作者提出了在防御者采样代表噪声的时候使用 one-time randomness，从而防御者对于相同的查询样本数据总是返回相同的置信值向量。主要步骤如下：</p>
+<ul>
+<li>计算查询样本的 hash ，将 hash 作为 seed 利用伪随机数生成器生成 $p&rsquo; \in [0,1]$</li>
+<li>当 $p&rsquo; &lt; p$ 时添加 $r$，否则不添加</li>
+</ul>
+<h1 id="4-总结">4 总结</h1>
+<p>论文提出了一个很有意思的攻击解决方法，通过对目标模型得到的置信评分向量以一定的概率添加噪声得到一个随机噪声添加机制，并且让防御者模拟攻击者的攻击分类器形成防御分类器，进而提出优化问题并且求解。</p>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">Xtar</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2022-09-18
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/%E6%88%90%E5%91%98%E6%8E%A8%E7%90%86/">成员推理</a>
+          <a href="/tags/%E9%98%B2%E5%BE%A1%E6%96%B9%E6%B3%95/">防御方法</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB11/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">论文阅读11:《Enhanced Mixup Training：a Defense Method Against Membership InferenceAttack》</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        <a class="next" href="/post/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB9/">
+            <span class="next-text nav-default">论文阅读9:《Property Inference Attacks Against GANs》</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:xu-hx@foxmail.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://github.com/xhxlalala" class="iconfont icon-github" title="github"></a>
+  <a href="http://xtarblog.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2021 - 
+    2024<span class="heart"><i class="iconfont icon-heart"></i></span><span>Xtar</span>
+  </span>
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.191509a5c8442abdb6eb5020a332fd59bdd83a7e78a2d2241108df9113504292.js"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+          displayMath: [['$$','$$'], ['\[\[','\]\]']],
+        }
+    };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.5/es5/tex-mml-chtml.js" integrity="sha256-HGLuEfFcsUJGhvB8cQ8nr0gai9EucOOaIxFw7qxmd+w=" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>韩立刚《计算机网络》| 第7章 网络安全 - Xtar&#39;s blog</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="Xtar" /><meta name="description" content="7.1 安全包括哪些方面 数据存储安全 应用程序安全 操作系统安全 网络安全 物理安全 7.2 网络面临的四种威胁 （1）截获：信息在通信过程中被第三方截获 （2）中断" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.100.2 with theme even" />
+
+
+<link rel="canonical" href="http://xtarblog.github.io/post/%E9%9F%A9%E7%AB%8B%E5%88%9A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AC%AC7%E7%AB%A0%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.b5a744db6de49a86cadafb3b70f555ab443f83c307a483402259e94726b045ff.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="韩立刚《计算机网络》| 第7章 网络安全" />
+<meta property="og:description" content="7.1 安全包括哪些方面 数据存储安全 应用程序安全 操作系统安全 网络安全 物理安全 7.2 网络面临的四种威胁 （1）截获：信息在通信过程中被第三方截获 （2）中断" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://xtarblog.github.io/post/%E9%9F%A9%E7%AB%8B%E5%88%9A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AC%AC7%E7%AB%A0%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2022-06-18T19:49:39+08:00" />
+<meta property="article:modified_time" content="2022-06-18T19:49:39+08:00" />
+
+<meta itemprop="name" content="韩立刚《计算机网络》| 第7章 网络安全">
+<meta itemprop="description" content="7.1 安全包括哪些方面 数据存储安全 应用程序安全 操作系统安全 网络安全 物理安全 7.2 网络面临的四种威胁 （1）截获：信息在通信过程中被第三方截获 （2）中断"><meta itemprop="datePublished" content="2022-06-18T19:49:39+08:00" />
+<meta itemprop="dateModified" content="2022-06-18T19:49:39+08:00" />
+<meta itemprop="wordCount" content="1295">
+<meta itemprop="keywords" content="计算机网络," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="韩立刚《计算机网络》| 第7章 网络安全"/>
+<meta name="twitter:description" content="7.1 安全包括哪些方面 数据存储安全 应用程序安全 操作系统安全 网络安全 物理安全 7.2 网络面临的四种威胁 （1）截获：信息在通信过程中被第三方截获 （2）中断"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Xtar&#39;s blog</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+
+  
+
+
+</nav>
+
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Xtar&#39;s blog</a>
+</div>
+
+
+
+
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+
+<script type="text/javascript"
+        async
+        src="https://cdn.bootcss.com/mathjax/2.7.3/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\[\[','\]\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+
+MathJax.Hub.Queue(function() {
+    
+    
+    
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+
+<style>
+code.has-jax {
+    font: inherit;
+    font-size: 100%;
+    background: inherit;
+    border: inherit;
+    color: #515151;
+}
+</style>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">韩立刚《计算机网络》| 第7章 网络安全</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2022-06-18 </span>
+        <div class="post-category">
+            <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/"> 计算机基础 </a>
+            </div>
+          <span class="more-meta"> 约 1295 字 </span>
+          <span class="more-meta"> 预计阅读 3 分钟 </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#71-安全包括哪些方面">7.1 安全包括哪些方面</a></li>
+    <li><a href="#72-网络面临的四种威胁">7.2 网络面临的四种威胁</a></li>
+    <li><a href="#73-病毒和木马">7.3 病毒和木马</a>
+      <ul>
+        <li><a href="#查木马方法">查木马方法：</a></li>
+      </ul>
+    </li>
+    <li><a href="#74-加密技术">7.4 加密技术</a>
+      <ul>
+        <li><a href="#741-对称加密秘钥相同">7.4.1 对称加密：秘钥相同</a></li>
+        <li><a href="#742-非对称加密加密秘钥和解密秘钥不同-公钥和私钥">7.4.2 非对称加密：加密秘钥和解密秘钥不同 公钥和私钥</a></li>
+        <li><a href="#743-非对称加密和对称加密结合">7.4.3 非对称加密和对称加密结合</a></li>
+        <li><a href="#744-证书颁发机构ca">7.4.4 证书颁发机构CA</a></li>
+      </ul>
+    </li>
+    <li><a href="#75-internet上使用的安全协议">7.5 Internet上使用的安全协议</a>
+      <ul>
+        <li><a href="#751-安全套接字ssl传输层安全">7.5.1 安全套接字SSL（传输层安全）</a>
+          <ul>
+            <li><a href="#ssl位置">SSL位置</a></li>
+            <li><a href="#功能">功能</a></li>
+          </ul>
+        </li>
+        <li><a href="#752-ipsec网络层安全">7.5.2 IPSec（网络层安全）</a>
+          <ul>
+            <li><a href="#最主要两部分">最主要两部分</a></li>
+            <li><a href="#安全关联">安全关联</a></li>
+          </ul>
+        </li>
+        <li><a href="#753-数据链路层安全">7.5.3 数据链路层安全</a>
+          <ul>
+            <li><a href="#链路加密">链路加密</a></li>
+            <li><a href="#端到端加密">端到端加密</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#76-防火墙">7.6 防火墙</a></li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <h1 id="71-安全包括哪些方面">7.1 安全包括哪些方面</h1>
+<ul>
+<li><strong>数据存储安全</strong></li>
+<li><strong>应用程序安全</strong></li>
+<li><strong>操作系统安全</strong></li>
+<li><strong>网络安全</strong></li>
+<li><strong>物理安全</strong></li>
+</ul>
+<h1 id="72-网络面临的四种威胁">7.2 网络面临的四种威胁</h1>
+<p>（1）<strong>截获</strong>：信息在通信过程中被第三方截获</p>
+<p>（2）<strong>中断</strong>：通信被恶意软件中断</p>
+<p>（3）<strong>篡改</strong>：通信信息别篡改</p>
+<p>（4）<strong>伪造</strong>：使用伪造的地址通信</p>
+<ul>
+<li>截获信息的攻击被称为：<strong>被动攻击</strong> （1）</li>
+<li>更改信息和利用用户使用资源的攻击：<strong>主动攻击</strong>（2）（3）（4）</li>
+</ul>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWcubXVidS5jb20vZG9jdW1lbnRfaW1hZ2UvMDdkMjY4MTEtMTY1Ni00N2Y1LTgwN2MtYjllMWE4NWEyYmY1LTUwNDExNzQuanBn?x-oss-process=image/format,png" alt="img"></p>
+<h1 id="73-病毒和木马">7.3 病毒和木马</h1>
+<ul>
+<li><strong>计算机病毒</strong>：会传染其他程序的程序（熊猫烧香病毒）</li>
+<li><strong>计算机蠕虫</strong>：消耗计算机资源，如CPU、内存等</li>
+<li><strong>特洛伊木马</strong>：需要与外部通信，敌通外国（灰鸽子木马——远程控制）</li>
+</ul>
+<h2 id="查木马方法">查木马方法：</h2>
+<ul>
+<li>1.查看会话 <code>netstat -n</code> ，是否有可疑会话</li>
+<li>2.运行 <code>msconfig</code> 查服务，隐藏微软服务查找可疑服务</li>
+<li>3.安装杀毒软件</li>
+</ul>
+<p><strong>逻辑炸弹</strong>：满足特定运行环境时才运行</p>
+<h1 id="74-加密技术">7.4 加密技术</h1>
+<h2 id="741-对称加密秘钥相同">7.4.1 对称加密：秘钥相同</h2>
+<ul>
+<li>优点：效率高</li>
+<li>缺点：秘钥不适合在网上传输；秘钥维护麻烦</li>
+</ul>
+<h2 id="742-非对称加密加密秘钥和解密秘钥不同-公钥和私钥">7.4.2 非对称加密：加密秘钥和解密秘钥不同 公钥和私钥</h2>
+<p>公钥加密私钥解密或私钥加密公钥解密</p>
+<h2 id="743-非对称加密和对称加密结合">7.4.3 非对称加密和对称加密结合</h2>
+<p>发送方先使用对称加密的秘钥对数据进行加密，然后用接收方公钥对对称加密的秘钥加密；接收方接收到数据后，先用私钥解开对称加密的秘钥，然后再用秘钥解开数据</p>
+<p><strong>应用：数字签名</strong></p>
+<ul>
+<li><strong>A to B过程</strong>：A使用单向散列函数对数据操作产生一个128位的摘要，然后使用私钥对这个128位的摘要进行加密即签名，最后将要发送的数据、A的签名、A的公钥一同发送过去；B收到后，使用同样的散列函数对数据进行操作，也产生一个摘要1，同时对A的签名使用公钥进行解密得到摘要2，摘要1和摘要2进行对比即可确定数据是否被修改</li>
+<li><strong>作用</strong>：防止抵赖；检查签名后内容是否被更改</li>
+</ul>
+<h2 id="744-证书颁发机构ca">7.4.4 证书颁发机构CA</h2>
+<p>向单位发放带有数字签名的公钥私钥对（数字证书），确认企业和个人的身份；发布证书吊销列表；企业和个人信任证书颁发机构</p>
+<h1 id="75-internet上使用的安全协议">7.5 Internet上使用的安全协议</h1>
+<h2 id="751-安全套接字ssl传输层安全">7.5.1 安全套接字SSL（传输层安全）</h2>
+<h3 id="ssl位置">SSL位置</h3>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWcubXVidS5jb20vZG9jdW1lbnRfaW1hZ2UvMTUzNGQ0NDItOTg4Mi00NmRkLWJiZTEtYmE3YmJkNWM2ZWNhLTUwNDExNzQuanBn?x-oss-process=image/format,png" alt="img"></p>
+<ul>
+<li>http：TCP 80；https：TCP 443</li>
+<li>imaps：tcp-993；pop3s：tcp-995；smtps：tcp-465</li>
+</ul>
+<h3 id="功能">功能</h3>
+<ul>
+<li>(1)  <strong>SSL 服务器鉴别</strong> 允许用户证实服务器的身份。具有 SS L 功能的浏览器维持一个表，上面有一些可信赖的认证中心CA (Certificate Authority)和它们的公钥。</li>
+<li>(2)  <strong>加密的 SSL 会话</strong> 客户和服务器交互的所有数据都在发送方加密，在接收方解密。</li>
+<li>(3)  <strong>SSL 客户鉴别</strong>允许服务器证实客户的身份。</li>
+</ul>
+<h2 id="752-ipsec网络层安全">7.5.2 IPSec（网络层安全）</h2>
+<h3 id="最主要两部分">最主要两部分</h3>
+<ul>
+<li><strong>鉴别首部 AH</strong>(Authentication Header)：AH鉴别源点和检查数据完整性，但不能保密。</li>
+<li><strong>封装安全有效载荷 ESP</strong>(EncapsulationSecurity Payload)：ESP 比 AH 复杂得多，它鉴别源点、检查数据完整性和提供保密。</li>
+</ul>
+<h3 id="安全关联">安全关联</h3>
+<ul>
+<li>在使用 AH 或 ESP 之前，先要从源主机到目的主机建立一条网络层的逻辑连接。此逻辑连接叫做<strong>安全关联 SA</strong></li>
+</ul>
+<h2 id="753-数据链路层安全">7.5.3 数据链路层安全</h2>
+<h3 id="链路加密">链路加密</h3>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWcubXVidS5jb20vZG9jdW1lbnRfaW1hZ2UvM2ViYmYxNDAtMTZjZi00ZGZkLWJlMDUtZjNhMzJlMjg2ZDZmLTUwNDExNzQuanBn?x-oss-process=image/format,png" alt="img"></p>
+<h3 id="端到端加密">端到端加密</h3>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWcubXVidS5jb20vZG9jdW1lbnRfaW1hZ2UvNmMxNTJlYmEtOWU1Ny00NjlmLWE2OGQtYTg0YjI5OTQyMDk3LTUwNDExNzQuanBn?x-oss-process=image/format,png" alt="img"></p>
+<h1 id="76-防火墙">7.6 防火墙</h1>
+<ul>
+<li>防火墙是由软件、硬件构成的系统， 是一种特殊编程的<strong>路由器</strong>， 用来在两个网络之间实施接入控制策略。接入控制策略是由使用防火墙的单位自行制订的，为的是可以最适合本单位的需要。</li>
+<li>防火墙内的网络称为“<strong>可信赖的网络</strong>”(trusted network)，而将外部的因特网称为“<strong>不可信赖的网络</strong>”(untrusted network)。</li>
+<li>防火墙可用来解决<strong>内联网</strong>和<strong>外联网</strong>的安全问题。</li>
+</ul>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">Xtar</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2022-06-18
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">计算机网络</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/%E9%9F%A9%E7%AB%8B%E5%88%9A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AC%AC8%E7%AB%A0internet%E4%B8%8A%E7%9A%84%E9%9F%B3%E9%A2%91%E8%A7%86%E9%A2%91/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">韩立刚《计算机网络》| 第8章 Internet上的音频视频</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        <a class="next" href="/post/%E9%9F%A9%E7%AB%8B%E5%88%9A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AC%AC6%E7%AB%A0%E5%BA%94%E7%94%A8%E5%B1%82/">
+            <span class="next-text nav-default">韩立刚《计算机网络》| 第6章 应用层</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:xu-hx@foxmail.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://github.com/xhxlalala" class="iconfont icon-github" title="github"></a>
+  <a href="http://xtarblog.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2021 - 
+    2024<span class="heart"><i class="iconfont icon-heart"></i></span><span>Xtar</span>
+  </span>
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.191509a5c8442abdb6eb5020a332fd59bdd83a7e78a2d2241108df9113504292.js"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+          displayMath: [['$$','$$'], ['\[\[','\]\]']],
+        }
+    };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.5/es5/tex-mml-chtml.js" integrity="sha256-HGLuEfFcsUJGhvB8cQ8nr0gai9EucOOaIxFw7qxmd+w=" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>
