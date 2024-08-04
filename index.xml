@@ -2,377 +2,377 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Xtar&#39;s blog</title>
-    <link>http://xtarblog.github.io/</link>
+    <link>https://xtar.netlify.app/</link>
     <description>Recent content on Xtar&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 12 Mar 2023 11:22:19 +0800</lastBuildDate><atom:link href="http://xtarblog.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 12 Mar 2023 11:22:19 +0800</lastBuildDate><atom:link href="https://xtar.netlify.app/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>CP-ABE 访问控制技术总结</title>
-      <link>http://xtarblog.github.io/post/cp-abe/</link>
+      <link>https://xtar.netlify.app/post/cp-abe/</link>
       <pubDate>Sun, 12 Mar 2023 11:22:19 +0800</pubDate>
       
-      <guid>http://xtarblog.github.io/post/cp-abe/</guid>
+      <guid>https://xtar.netlify.app/post/cp-abe/</guid>
       <description>主要总结一下现有的 CP-ABE 机制。 一、ABE 介绍 ABE（Attribute-Based Encryption）访问控制机制是一种基于属性的加密技术，它</description>
     </item>
     
     <item>
       <title>More Effective C&#43;&#43; | 第 6 章 杂项</title>
-      <link>http://xtarblog.github.io/post/moreeffectivec&#43;&#43;_6/</link>
+      <link>https://xtar.netlify.app/post/moreeffectivec&#43;&#43;_6/</link>
       <pubDate>Mon, 05 Dec 2022 17:21:37 +0800</pubDate>
       
-      <guid>http://xtarblog.github.io/post/moreeffectivec&#43;&#43;_6/</guid>
+      <guid>https://xtar.netlify.app/post/moreeffectivec&#43;&#43;_6/</guid>
       <description>条款 32：在未来时态下发展程序 在未来时态下设计程序，就是接受“事情总会改变”的事实，并准备应对之道。 未来式思维主要考虑如下： 提供完整的 class ——</description>
     </item>
     
     <item>
       <title>More Effective C&#43;&#43; | 第 5 章 技术</title>
-      <link>http://xtarblog.github.io/post/moreeffectivec&#43;&#43;_5/</link>
+      <link>https://xtar.netlify.app/post/moreeffectivec&#43;&#43;_5/</link>
       <pubDate>Mon, 05 Dec 2022 17:13:55 +0800</pubDate>
       
-      <guid>http://xtarblog.github.io/post/moreeffectivec&#43;&#43;_5/</guid>
+      <guid>https://xtar.netlify.app/post/moreeffectivec&#43;&#43;_5/</guid>
       <description>条款 25：将 constructor 和 non-member functions 虚化 所谓 virtual constructor 就是某种函数，视其获得的输入，可产生不同类型的对象。virtual constructors 在许多情况下有用，其中之一就是从磁盘（或</description>
     </item>
     
     <item>
       <title>More Effective C&#43;&#43; | 第 4 章 效率</title>
-      <link>http://xtarblog.github.io/post/moreeffectivec&#43;&#43;_4/</link>
+      <link>https://xtar.netlify.app/post/moreeffectivec&#43;&#43;_4/</link>
       <pubDate>Mon, 05 Dec 2022 17:13:31 +0800</pubDate>
       
-      <guid>http://xtarblog.github.io/post/moreeffectivec&#43;&#43;_4/</guid>
+      <guid>https://xtar.netlify.app/post/moreeffectivec&#43;&#43;_4/</guid>
       <description>条款 16：谨记 80-20 准则 80-20 准则即： 一个程序 80% 的资源用于 20% 的代码身上。 考虑 80-20 准则的时候，有一点很重要，即：不要过于拘泥于字面上的数字。不论数字是 80-20</description>
     </item>
     
     <item>
       <title>More Effective C&#43;&#43; | 第 3 章 异常</title>
-      <link>http://xtarblog.github.io/post/moreeffectivec&#43;&#43;_3/</link>
+      <link>https://xtar.netlify.app/post/moreeffectivec&#43;&#43;_3/</link>
       <pubDate>Mon, 05 Dec 2022 17:13:25 +0800</pubDate>
       
-      <guid>http://xtarblog.github.io/post/moreeffectivec&#43;&#43;_3/</guid>
+      <guid>https://xtar.netlify.app/post/moreeffectivec&#43;&#43;_3/</guid>
       <description>条款 9：利用 destructors 避免泄露资源 假设有如下的代码： 1 2 3 4 5 6 7 8 9 10 //从s读取动物信息，返回一个指针，指向一个新分配的对象 ALA* readALA(istream&amp;amp; s); void processAdoptions(istream&amp;amp; dataSource) { while(dataSource) { ALA*</description>
     </item>
     
     <item>
       <title>More Effective C&#43;&#43; | 第 2 章 操作符</title>
-      <link>http://xtarblog.github.io/post/moreeffectivec&#43;&#43;_2/</link>
+      <link>https://xtar.netlify.app/post/moreeffectivec&#43;&#43;_2/</link>
       <pubDate>Mon, 05 Dec 2022 17:13:21 +0800</pubDate>
       
-      <guid>http://xtarblog.github.io/post/moreeffectivec&#43;&#43;_2/</guid>
+      <guid>https://xtar.netlify.app/post/moreeffectivec&#43;&#43;_2/</guid>
       <description>条款 5：对定制的“类型转换函数”保持警觉 C++ 允许编译器在不同类型之间执行隐式转换。但有一些可怕的类型转换需要格外注意：单变量 constructors 和 隐式类型转换操</description>
     </item>
     
     <item>
       <title>More Effective C&#43;&#43; | 第 1 章 基础议题</title>
-      <link>http://xtarblog.github.io/post/moreeffectivec&#43;&#43;_1/</link>
+      <link>https://xtar.netlify.app/post/moreeffectivec&#43;&#43;_1/</link>
       <pubDate>Mon, 05 Dec 2022 17:09:16 +0800</pubDate>
       
-      <guid>http://xtarblog.github.io/post/moreeffectivec&#43;&#43;_1/</guid>
+      <guid>https://xtar.netlify.app/post/moreeffectivec&#43;&#43;_1/</guid>
       <description>条款 1：仔细区别 pointers 和 references 没有所谓的 null reference。一个 reference 必须总代表某个对象。所以如果使用某个变量，其目的是用来指向另一个对象，但是也有可</description>
     </item>
     
     <item>
       <title>Effective C&#43;&#43; | 第 9 章 杂项讨论</title>
-      <link>http://xtarblog.github.io/post/effectivec&#43;&#43;_9/</link>
+      <link>https://xtar.netlify.app/post/effectivec&#43;&#43;_9/</link>
       <pubDate>Mon, 31 Oct 2022 21:38:36 +0800</pubDate>
       
-      <guid>http://xtarblog.github.io/post/effectivec&#43;&#43;_9/</guid>
+      <guid>https://xtar.netlify.app/post/effectivec&#43;&#43;_9/</guid>
       <description>Item 53：不要轻易忽略编译器的警告 严肃对待编译器发出的警告信息。努力在你的编译器的最高（最严苛）警告级别下争取“无任何警告”的荣誉。 不要过度依</description>
     </item>
     
     <item>
       <title>Effective C&#43;&#43; | 定制 new 和 delete</title>
-      <link>http://xtarblog.github.io/post/effectivec&#43;&#43;_8/</link>
+      <link>https://xtar.netlify.app/post/effectivec&#43;&#43;_8/</link>
       <pubDate>Mon, 31 Oct 2022 21:38:33 +0800</pubDate>
       
-      <guid>http://xtarblog.github.io/post/effectivec&#43;&#43;_8/</guid>
+      <guid>https://xtar.netlify.app/post/effectivec&#43;&#43;_8/</guid>
       <description>Item 49：了解 new-handler 的行为 当 operator new 抛出异常以反映一个未获满足的内存需求前，它会先调用一个客户指定的错误处理函数，一个所谓的 new handler . 为了指定这个“用于处</description>
     </item>
     
     <item>
       <title>Effective C&#43;&#43; | 第 7 章 模板与泛型编程</title>
-      <link>http://xtarblog.github.io/post/effectivec&#43;&#43;_7/</link>
+      <link>https://xtar.netlify.app/post/effectivec&#43;&#43;_7/</link>
       <pubDate>Mon, 31 Oct 2022 21:38:26 +0800</pubDate>
       
-      <guid>http://xtarblog.github.io/post/effectivec&#43;&#43;_7/</guid>
+      <guid>https://xtar.netlify.app/post/effectivec&#43;&#43;_7/</guid>
       <description>Item 41：了解隐式接口和编译器多态 面向对象编程世界总是以显式接口与运行期多态解决问题： 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 class Widget { public: Widget(); virtual ~Widget(); virtual std::size_t size() const;</description>
     </item>
     
     <item>
       <title>Effective C&#43;&#43; | 第 6 章 继承与面向对象设计</title>
-      <link>http://xtarblog.github.io/post/effectivec&#43;&#43;_6/</link>
+      <link>https://xtar.netlify.app/post/effectivec&#43;&#43;_6/</link>
       <pubDate>Mon, 31 Oct 2022 21:38:22 +0800</pubDate>
       
-      <guid>http://xtarblog.github.io/post/effectivec&#43;&#43;_6/</guid>
+      <guid>https://xtar.netlify.app/post/effectivec&#43;&#43;_6/</guid>
       <description>Item 32：确定你的 public 继承塑模出 is-a 关系 以 C++ 进行面向对象编程，最重要的一个规则是：public inheritance 意味着 “is-a” 的关系。 public 继承和 is-a 之间的等价关系</description>
     </item>
     
     <item>
       <title>Effective C&#43;&#43; | 第 5 章 实现</title>
-      <link>http://xtarblog.github.io/post/effectivec&#43;&#43;_5/</link>
+      <link>https://xtar.netlify.app/post/effectivec&#43;&#43;_5/</link>
       <pubDate>Mon, 31 Oct 2022 21:38:15 +0800</pubDate>
       
-      <guid>http://xtarblog.github.io/post/effectivec&#43;&#43;_5/</guid>
+      <guid>https://xtar.netlify.app/post/effectivec&#43;&#43;_5/</guid>
       <description>Item 26：尽可能延后变量定义式的出现时间 “尽可能延后” 的真正意义是：不只应该延后变量的定义，直到非得使用该变量的前一刻为止，甚至应该尝试延后这</description>
     </item>
     
     <item>
       <title>Effective C&#43;&#43; | 第 4 章 设计与声明</title>
-      <link>http://xtarblog.github.io/post/effectivec&#43;&#43;_4/</link>
+      <link>https://xtar.netlify.app/post/effectivec&#43;&#43;_4/</link>
       <pubDate>Mon, 31 Oct 2022 21:35:16 +0800</pubDate>
       
-      <guid>http://xtarblog.github.io/post/effectivec&#43;&#43;_4/</guid>
+      <guid>https://xtar.netlify.app/post/effectivec&#43;&#43;_4/</guid>
       <description>Item 18：让接口容易被正确使用，不易被误用 理想上，如果客户企图使用某个接口而却没有获得他所预期的行为，这个代码不该通过编译；如果代码通过了编译</description>
     </item>
     
     <item>
       <title>Effective C&#43;&#43; | 第 3 章 资源管理</title>
-      <link>http://xtarblog.github.io/post/effectivec&#43;&#43;_3/</link>
+      <link>https://xtar.netlify.app/post/effectivec&#43;&#43;_3/</link>
       <pubDate>Mon, 31 Oct 2022 21:33:02 +0800</pubDate>
       
-      <guid>http://xtarblog.github.io/post/effectivec&#43;&#43;_3/</guid>
+      <guid>https://xtar.netlify.app/post/effectivec&#43;&#43;_3/</guid>
       <description>Item 13：用对象管理资源 为了保证资源被释放，通常把资源放进对象内，依赖 C++ 的“析构函数自动调用机制”。 标准程序库提供了 auto_ptr 来避免潜在的资源泄露，a</description>
     </item>
     
     <item>
       <title>Effective C&#43;&#43; | 第 2 章 构造、析构、赋值</title>
-      <link>http://xtarblog.github.io/post/effectivec&#43;&#43;_2/</link>
+      <link>https://xtar.netlify.app/post/effectivec&#43;&#43;_2/</link>
       <pubDate>Mon, 31 Oct 2022 21:30:26 +0800</pubDate>
       
-      <guid>http://xtarblog.github.io/post/effectivec&#43;&#43;_2/</guid>
+      <guid>https://xtar.netlify.app/post/effectivec&#43;&#43;_2/</guid>
       <description>Item 5 了解 C++ 默默编写并调用哪些函数 当定义一个空类时，如果自己没有声明，编译器将自己为其生成一个 copy 构造函数 、一个 copy assignment 操作符和一个析构函数。此外如</description>
     </item>
     
     <item>
       <title>Effective C&#43;&#43; | 第 1 章 适应 C&#43;&#43;</title>
-      <link>http://xtarblog.github.io/post/effectivec&#43;&#43;_1/</link>
+      <link>https://xtar.netlify.app/post/effectivec&#43;&#43;_1/</link>
       <pubDate>Mon, 31 Oct 2022 21:25:20 +0800</pubDate>
       
-      <guid>http://xtarblog.github.io/post/effectivec&#43;&#43;_1/</guid>
+      <guid>https://xtar.netlify.app/post/effectivec&#43;&#43;_1/</guid>
       <description>item 1：把c++当作语言的联邦 c++的四种语言特性： C：c++基于c，块、statements、预处理器、内置数据类型、数组、指针等都来自c 面</description>
     </item>
     
     <item>
       <title>《Fluent Python》知识总结</title>
-      <link>http://xtarblog.github.io/post/fluentpython/</link>
+      <link>https://xtar.netlify.app/post/fluentpython/</link>
       <pubDate>Mon, 17 Oct 2022 11:22:48 +0800</pubDate>
       
-      <guid>http://xtarblog.github.io/post/fluentpython/</guid>
+      <guid>https://xtar.netlify.app/post/fluentpython/</guid>
       <description>第1章 Python数据类型 __repr__ 和 __str__ 的区别在于，后者是在str()函数被调用，或是在用print函数打印一个对象时才被调用的，并且它返回的字符串</description>
     </item>
     
     <item>
       <title>论文阅读15:《Defending Label Inference and Backdoor Attacks in Vertical Federated Learning》</title>
-      <link>http://xtarblog.github.io/post/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB15/</link>
+      <link>https://xtar.netlify.app/post/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB15/</link>
       <pubDate>Wed, 05 Oct 2022 21:27:16 +0800</pubDate>
       
-      <guid>http://xtarblog.github.io/post/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB15/</guid>
+      <guid>https://xtar.netlify.app/post/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB15/</guid>
       <description>1 介绍 本文主要介绍了纵向联邦学习( VFL )下的标签推理攻击和后门攻击，并提出了一种全新的防御方法。 纵向联邦学习下攻击和防御尤其具有挑战，因为无法</description>
     </item>
     
     <item>
       <title>论文阅读14:《TransMIA：Membership Inference Attacks Using Transfer Shadow Training》</title>
-      <link>http://xtarblog.github.io/post/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB14/</link>
+      <link>https://xtar.netlify.app/post/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB14/</link>
       <pubDate>Wed, 05 Oct 2022 21:09:31 +0800</pubDate>
       
-      <guid>http://xtarblog.github.io/post/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB14/</guid>
+      <guid>https://xtar.netlify.app/post/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB14/</guid>
       <description>1 介绍 迁移学习近些年来很受欢迎。在这篇文章中，作者提出了 TransMIA ，使用transfer learning 在源模型上进行成员推理攻击当敌手只能访问迁移模型的参数时。</description>
     </item>
     
     <item>
       <title>论文阅读13:《EncoderMI：Membership Inference against Pre-trainedEncoders in Contrastive Learning》</title>
-      <link>http://xtarblog.github.io/post/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB13/</link>
+      <link>https://xtar.netlify.app/post/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB13/</link>
       <pubDate>Sun, 25 Sep 2022 21:12:44 +0800</pubDate>
       
-      <guid>http://xtarblog.github.io/post/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB13/</guid>
+      <guid>https://xtar.netlify.app/post/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB13/</guid>
       <description>1 介绍 给定一个无标签的图片集或者(图片，文本)对集，对比学习试着去预训练一个图片编码器，作为众多下游任务的特征提取器。给定一个图片编码器，下</description>
     </item>
     
     <item>
       <title>论文阅读12:《Membership Inference Attacks Against Recommender Systems》</title>
-      <link>http://xtarblog.github.io/post/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB12/</link>
+      <link>https://xtar.netlify.app/post/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB12/</link>
       <pubDate>Sun, 25 Sep 2022 20:32:27 +0800</pubDate>
       
-      <guid>http://xtarblog.github.io/post/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB12/</guid>
+      <guid>https://xtar.netlify.app/post/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB12/</guid>
       <description>1 介绍 近年来，推荐系统取得了良好的表现，成为应用最广泛的网络应用之一。然而，推荐系统通常使用高度敏感的用户数据进行训练，从而推荐系统潜在的数</description>
     </item>
     
     <item>
       <title>论文阅读11:《Enhanced Mixup Training：a Defense Method Against Membership InferenceAttack》</title>
-      <link>http://xtarblog.github.io/post/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB11/</link>
+      <link>https://xtar.netlify.app/post/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB11/</link>
       <pubDate>Sun, 18 Sep 2022 17:07:41 +0800</pubDate>
       
-      <guid>http://xtarblog.github.io/post/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB11/</guid>
+      <guid>https://xtar.netlify.app/post/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB11/</guid>
       <description>1 介绍 MIA 通常利用 model-based 或者 metric-based 推理方法来推测一个具体的数据样本是否是目标模型训练集中的成员。现有的防御措施主要有以下两个缺陷： 当前的防御措施主要用</description>
     </item>
     
     <item>
       <title>论文阅读10:《MemGuard：Defending against Black-Box Membership Inference Attacks via Adversarial Examples》</title>
-      <link>http://xtarblog.github.io/post/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB10/</link>
+      <link>https://xtar.netlify.app/post/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB10/</link>
       <pubDate>Sun, 18 Sep 2022 16:42:36 +0800</pubDate>
       
-      <guid>http://xtarblog.github.io/post/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB10/</guid>
+      <guid>https://xtar.netlify.app/post/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB10/</guid>
       <description>1 介绍 成员推理攻击中，攻击者通常训练一个二分类器，输入样本的置信值向量，输出该样本是否为训练集中的成员。成员推理攻击主要利用的是目标模型的过</description>
     </item>
     
     <item>
       <title>论文阅读9:《Property Inference Attacks Against GANs》</title>
-      <link>http://xtarblog.github.io/post/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB9/</link>
+      <link>https://xtar.netlify.app/post/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB9/</link>
       <pubDate>Sun, 04 Sep 2022 21:43:52 +0800</pubDate>
       
-      <guid>http://xtarblog.github.io/post/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB9/</guid>
+      <guid>https://xtar.netlify.app/post/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB9/</guid>
       <description>1 介绍 本文提出了第一个针对GANs的 属性推理攻击。 具体来说，敌手试着去推测宏观的训练数据集属性，例如用来训练GAN模型的某一属性的样本分布。</description>
     </item>
     
     <item>
       <title>论文阅读8:《 Property Inference Attacks on Fully Connected Neural Networks using Permutation Invariant Representations》</title>
-      <link>http://xtarblog.github.io/post/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB8/</link>
+      <link>https://xtar.netlify.app/post/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB8/</link>
       <pubDate>Sun, 04 Sep 2022 21:19:19 +0800</pubDate>
       
-      <guid>http://xtarblog.github.io/post/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB8/</guid>
+      <guid>https://xtar.netlify.app/post/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB8/</guid>
       <description>1 介绍 本文主要介绍了针对全连接神经网络（FCNNs）的 白盒 环境下的属性推理攻击。具体来说就是推理训练数据集的全局属性，例如数据被生产的环境或</description>
     </item>
     
     <item>
       <title>论文阅读7:《Label-Only Membership Inference Attacks》</title>
-      <link>http://xtarblog.github.io/post/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB7/</link>
+      <link>https://xtar.netlify.app/post/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB7/</link>
       <pubDate>Sun, 28 Aug 2022 20:45:42 +0800</pubDate>
       
-      <guid>http://xtarblog.github.io/post/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB7/</guid>
+      <guid>https://xtar.netlify.app/post/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB7/</guid>
       <description>1 介绍 以往的成员推理攻击利用的是模型在训练集和测试集上置信值的不同。如果敌手只能获得标签而无法获得具体的置信值，这种攻击就无法得到应用了。本</description>
     </item>
     
     <item>
       <title>论文阅读6:《Leakage of Dataset Properties in Multi-Party Machine Learning》</title>
-      <link>http://xtarblog.github.io/post/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB6/</link>
+      <link>https://xtar.netlify.app/post/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB6/</link>
       <pubDate>Sun, 28 Aug 2022 20:06:39 +0800</pubDate>
       
-      <guid>http://xtarblog.github.io/post/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB6/</guid>
+      <guid>https://xtar.netlify.app/post/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB6/</guid>
       <description>1 介绍 本文主要介绍了针对中心化多参与方机器学习环境下数据集属性的推理攻击，主要是 population-level 的数据集属性推理。安全多方机器学习提供参与方黑盒的访问以便</description>
     </item>
     
     <item>
       <title>论文阅读5:《GAN-Leaks: A Taxonomy of Membership Inference Attacks against Generative Models》</title>
-      <link>http://xtarblog.github.io/post/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB5/</link>
+      <link>https://xtar.netlify.app/post/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB5/</link>
       <pubDate>Mon, 15 Aug 2022 16:22:14 +0800</pubDate>
       
-      <guid>http://xtarblog.github.io/post/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB5/</guid>
+      <guid>https://xtar.netlify.app/post/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB5/</guid>
       <description>1. 文章概述 首次对针对生成模型的成员推理攻击进行了分类 提供了一种有理论根据的攻击校准技术 2. 背景知识 2.1 Generative Model： 生成模型主要有两种，分别是：</description>
     </item>
     
     <item>
       <title>论文阅读4:《Exploiting Unintended Feature Leakage in Collaborative Learning》</title>
-      <link>http://xtarblog.github.io/post/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB4/</link>
+      <link>https://xtar.netlify.app/post/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB4/</link>
       <pubDate>Tue, 02 Aug 2022 18:07:15 +0800</pubDate>
       
-      <guid>http://xtarblog.github.io/post/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB4/</guid>
+      <guid>https://xtar.netlify.app/post/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB4/</guid>
       <description>1. 文章概述 本文阐释了 Collaborative learning 的参数更新过程存在无意地泄露用户训练数据信息的漏洞，并且本文采用了消极和积极的两种攻击方式来利用这个漏洞。首先，利用</description>
     </item>
     
     <item>
       <title>论文阅读3:《Inference Attack and Defense on the Distributed Private Fair Machine Learning Framework》</title>
-      <link>http://xtarblog.github.io/post/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB3/</link>
+      <link>https://xtar.netlify.app/post/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB3/</link>
       <pubDate>Sat, 23 Jul 2022 21:43:46 +0800</pubDate>
       
-      <guid>http://xtarblog.github.io/post/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB3/</guid>
+      <guid>https://xtar.netlify.app/post/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB3/</guid>
       <description>1. 介绍 公平和隐私都是机器学习中重要的社会规范。在本文作者19年的一篇文章中，作者提出了一种分布式框架来学习公平的预测模型同时保护用户的人口统</description>
     </item>
     
     <item>
       <title>论文阅读2:《Membership Inference Attack on Graph Neural Networks》</title>
-      <link>http://xtarblog.github.io/post/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB2/</link>
+      <link>https://xtar.netlify.app/post/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB2/</link>
       <pubDate>Sun, 17 Jul 2022 21:45:27 +0800</pubDate>
       
-      <guid>http://xtarblog.github.io/post/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB2/</guid>
+      <guid>https://xtar.netlify.app/post/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB2/</guid>
       <description>1. 介绍 图神经网络（GNNs） 通常用来生成传统的的深度神经网络或图数据，使用此神经网络可以处理节点分类、链接预测或图分类等任务。本文主要关注训</description>
     </item>
     
     <item>
       <title>论文阅读1:《Membership Inference Attacks Against Machine Learning Models》</title>
-      <link>http://xtarblog.github.io/post/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</link>
+      <link>https://xtar.netlify.app/post/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</link>
       <pubDate>Tue, 05 Jul 2022 11:34:47 +0800</pubDate>
       
-      <guid>http://xtarblog.github.io/post/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</guid>
+      <guid>https://xtar.netlify.app/post/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</guid>
       <description>1. 介绍 本文主要介绍了一种机器学习模型的推理攻击 &amp;mdash; 成员推理攻击。成员推理攻击即：给定一个数据记录以及对模型的黑盒访问，推断该数据记录是否在模型</description>
     </item>
     
     <item>
       <title>韩立刚《计算机网络》| 第9章 无线网络</title>
-      <link>http://xtarblog.github.io/post/%E9%9F%A9%E7%AB%8B%E5%88%9A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AC%AC9%E7%AB%A0%E6%97%A0%E7%BA%BF%E7%BD%91%E7%BB%9C/</link>
+      <link>https://xtar.netlify.app/post/%E9%9F%A9%E7%AB%8B%E5%88%9A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AC%AC9%E7%AB%A0%E6%97%A0%E7%BA%BF%E7%BD%91%E7%BB%9C/</link>
       <pubDate>Sat, 18 Jun 2022 19:50:35 +0800</pubDate>
       
-      <guid>http://xtarblog.github.io/post/%E9%9F%A9%E7%AB%8B%E5%88%9A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AC%AC9%E7%AB%A0%E6%97%A0%E7%BA%BF%E7%BD%91%E7%BB%9C/</guid>
+      <guid>https://xtar.netlify.app/post/%E9%9F%A9%E7%AB%8B%E5%88%9A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AC%AC9%E7%AB%A0%E6%97%A0%E7%BA%BF%E7%BD%91%E7%BB%9C/</guid>
       <description>9.1 几种无线网络比较 (1) PAN ZigBee 802.15.4 蓝牙 802.15.1 超宽带 802.15.3 (2) LAN Wi-Fi 802.11 a/g/b/n/ac (3) MAN WiMAX 802.16 (1) WAN 2G/3G/4G移动通信 9.2 无线局域网的组成 AP：接入点 BSS：基本服务集 ESS</description>
     </item>
     
     <item>
       <title>韩立刚《计算机网络》| 第8章 Internet上的音频视频</title>
-      <link>http://xtarblog.github.io/post/%E9%9F%A9%E7%AB%8B%E5%88%9A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AC%AC8%E7%AB%A0internet%E4%B8%8A%E7%9A%84%E9%9F%B3%E9%A2%91%E8%A7%86%E9%A2%91/</link>
+      <link>https://xtar.netlify.app/post/%E9%9F%A9%E7%AB%8B%E5%88%9A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AC%AC8%E7%AB%A0internet%E4%B8%8A%E7%9A%84%E9%9F%B3%E9%A2%91%E8%A7%86%E9%A2%91/</link>
       <pubDate>Sat, 18 Jun 2022 19:50:19 +0800</pubDate>
       
-      <guid>http://xtarblog.github.io/post/%E9%9F%A9%E7%AB%8B%E5%88%9A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AC%AC8%E7%AB%A0internet%E4%B8%8A%E7%9A%84%E9%9F%B3%E9%A2%91%E8%A7%86%E9%A2%91/</guid>
+      <guid>https://xtar.netlify.app/post/%E9%9F%A9%E7%AB%8B%E5%88%9A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AC%AC8%E7%AB%A0internet%E4%B8%8A%E7%9A%84%E9%9F%B3%E9%A2%91%E8%A7%86%E9%A2%91/</guid>
       <description>8.1 在Internet上传输音频视频面临哪些问题？ 音频视频 ：占用的带宽高，要求网速恒定、延迟低 数据信息 ：对带宽、网速是否恒定， 延迟要求不高 延迟</description>
     </item>
     
     <item>
       <title>韩立刚《计算机网络》| 第7章 网络安全</title>
-      <link>http://xtarblog.github.io/post/%E9%9F%A9%E7%AB%8B%E5%88%9A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AC%AC7%E7%AB%A0%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/</link>
+      <link>https://xtar.netlify.app/post/%E9%9F%A9%E7%AB%8B%E5%88%9A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AC%AC7%E7%AB%A0%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/</link>
       <pubDate>Sat, 18 Jun 2022 19:49:39 +0800</pubDate>
       
-      <guid>http://xtarblog.github.io/post/%E9%9F%A9%E7%AB%8B%E5%88%9A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AC%AC7%E7%AB%A0%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/</guid>
+      <guid>https://xtar.netlify.app/post/%E9%9F%A9%E7%AB%8B%E5%88%9A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AC%AC7%E7%AB%A0%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/</guid>
       <description>7.1 安全包括哪些方面 数据存储安全 应用程序安全 操作系统安全 网络安全 物理安全 7.2 网络面临的四种威胁 （1）截获：信息在通信过程中被第三方截获 （2）中断</description>
     </item>
     
     <item>
       <title>韩立刚《计算机网络》| 第6章 应用层</title>
-      <link>http://xtarblog.github.io/post/%E9%9F%A9%E7%AB%8B%E5%88%9A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AC%AC6%E7%AB%A0%E5%BA%94%E7%94%A8%E5%B1%82/</link>
+      <link>https://xtar.netlify.app/post/%E9%9F%A9%E7%AB%8B%E5%88%9A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AC%AC6%E7%AB%A0%E5%BA%94%E7%94%A8%E5%B1%82/</link>
       <pubDate>Sat, 18 Jun 2022 19:49:22 +0800</pubDate>
       
-      <guid>http://xtarblog.github.io/post/%E9%9F%A9%E7%AB%8B%E5%88%9A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AC%AC6%E7%AB%A0%E5%BA%94%E7%94%A8%E5%B1%82/</guid>
+      <guid>https://xtar.netlify.app/post/%E9%9F%A9%E7%AB%8B%E5%88%9A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AC%AC6%E7%AB%A0%E5%BA%94%E7%94%A8%E5%B1%82/</guid>
       <description>6.1 应用层协议 HTTP——Web 服务 FTP——文件传输协议 DNS——域名系统 DHCP——动态主机配置协议 TELNET——远程终端协议 RDP——</description>
     </item>
     
     <item>
       <title>韩立刚《计算机网络》| 第5章 传输层</title>
-      <link>http://xtarblog.github.io/post/%E9%9F%A9%E7%AB%8B%E5%88%9A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AC%AC5%E7%AB%A0%E4%BC%A0%E8%BE%93%E5%B1%82/</link>
+      <link>https://xtar.netlify.app/post/%E9%9F%A9%E7%AB%8B%E5%88%9A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AC%AC5%E7%AB%A0%E4%BC%A0%E8%BE%93%E5%B1%82/</link>
       <pubDate>Sat, 18 Jun 2022 19:48:57 +0800</pubDate>
       
-      <guid>http://xtarblog.github.io/post/%E9%9F%A9%E7%AB%8B%E5%88%9A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AC%AC5%E7%AB%A0%E4%BC%A0%E8%BE%93%E5%B1%82/</guid>
+      <guid>https://xtar.netlify.app/post/%E9%9F%A9%E7%AB%8B%E5%88%9A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AC%AC5%E7%AB%A0%E4%BC%A0%E8%BE%93%E5%B1%82/</guid>
       <description>5.1 上边三层协议 应用层：HTTP HTTPS DNS FTP SMTP POP3 RDP 传输层：TCP UDP 网络层：IP（RIP OSPF BGP）、ICMP、IGMP、ARP 5.2 TCP、UDP应用场景</description>
     </item>
     
     <item>
       <title>韩立刚《计算机网络》| 第4章 网络层</title>
-      <link>http://xtarblog.github.io/post/%E9%9F%A9%E7%AB%8B%E5%88%9A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AC%AC4%E7%AB%A0%E7%BD%91%E7%BB%9C%E5%B1%82/</link>
+      <link>https://xtar.netlify.app/post/%E9%9F%A9%E7%AB%8B%E5%88%9A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AC%AC4%E7%AB%A0%E7%BD%91%E7%BB%9C%E5%B1%82/</link>
       <pubDate>Sat, 18 Jun 2022 19:48:48 +0800</pubDate>
       
-      <guid>http://xtarblog.github.io/post/%E9%9F%A9%E7%AB%8B%E5%88%9A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AC%AC4%E7%AB%A0%E7%BD%91%E7%BB%9C%E5%B1%82/</guid>
+      <guid>https://xtar.netlify.app/post/%E9%9F%A9%E7%AB%8B%E5%88%9A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AC%AC4%E7%AB%A0%E7%BD%91%E7%BB%9C%E5%B1%82/</guid>
       <description>4.1 网络层向运输层提供的两种服务 可靠服务由端系统负责，不是网络 (1) 虚电路服务&amp;mdash;电信网 虚电路表示这只是一条逻辑上的连接，分组都沿着这条</description>
     </item>
     
     <item>
       <title>韩立刚《计算机网络》| 第3章 数据链路层</title>
-      <link>http://xtarblog.github.io/post/%E9%9F%A9%E7%AB%8B%E5%88%9A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AC%AC3%E7%AB%A0%E6%95%B0%E6%8D%AE%E9%93%BE%E8%B7%AF%E5%B1%82/</link>
+      <link>https://xtar.netlify.app/post/%E9%9F%A9%E7%AB%8B%E5%88%9A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AC%AC3%E7%AB%A0%E6%95%B0%E6%8D%AE%E9%93%BE%E8%B7%AF%E5%B1%82/</link>
       <pubDate>Sat, 18 Jun 2022 19:48:33 +0800</pubDate>
       
-      <guid>http://xtarblog.github.io/post/%E9%9F%A9%E7%AB%8B%E5%88%9A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AC%AC3%E7%AB%A0%E6%95%B0%E6%8D%AE%E9%93%BE%E8%B7%AF%E5%B1%82/</guid>
+      <guid>https://xtar.netlify.app/post/%E9%9F%A9%E7%AB%8B%E5%88%9A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AC%AC3%E7%AB%A0%E6%95%B0%E6%8D%AE%E9%93%BE%E8%B7%AF%E5%B1%82/</guid>
       <description>3.1 基本概念 (1) 信道类型 点对点信道（一对一） 广播信道（一对多） (2) 链路——点到点的物理线路段 (3) 数据链路——把实现通信协议的硬件和软件加到链路上，构</description>
     </item>
     
     <item>
       <title>韩立刚《计算机网络》| 第2章 物理层</title>
-      <link>http://xtarblog.github.io/post/%E9%9F%A9%E7%AB%8B%E5%88%9A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AC%AC2%E7%AB%A0%E7%89%A9%E7%90%86%E5%B1%82/</link>
+      <link>https://xtar.netlify.app/post/%E9%9F%A9%E7%AB%8B%E5%88%9A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AC%AC2%E7%AB%A0%E7%89%A9%E7%90%86%E5%B1%82/</link>
       <pubDate>Sat, 18 Jun 2022 19:48:18 +0800</pubDate>
       
-      <guid>http://xtarblog.github.io/post/%E9%9F%A9%E7%AB%8B%E5%88%9A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AC%AC2%E7%AB%A0%E7%89%A9%E7%90%86%E5%B1%82/</guid>
+      <guid>https://xtar.netlify.app/post/%E9%9F%A9%E7%AB%8B%E5%88%9A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AC%AC2%E7%AB%A0%E7%89%A9%E7%90%86%E5%B1%82/</guid>
       <description>2.1 物理层含义 物理层解决如何在连接各种计算机的传输媒体上传输数据比特流，而不是指具体的传输媒体 2.2 特性 机械特性：接口形状，大小，引线数目 电气特性</description>
     </item>
     
     <item>
       <title>韩立刚《计算机网络》| 第1章 计算机网络概述</title>
-      <link>http://xtarblog.github.io/post/%E9%9F%A9%E7%AB%8B%E5%88%9A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AC%AC1%E7%AB%A0%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E6%A6%82%E8%BF%B0/</link>
+      <link>https://xtar.netlify.app/post/%E9%9F%A9%E7%AB%8B%E5%88%9A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AC%AC1%E7%AB%A0%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E6%A6%82%E8%BF%B0/</link>
       <pubDate>Mon, 13 Jun 2022 19:07:48 +0800</pubDate>
       
-      <guid>http://xtarblog.github.io/post/%E9%9F%A9%E7%AB%8B%E5%88%9A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AC%AC1%E7%AB%A0%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E6%A6%82%E8%BF%B0/</guid>
+      <guid>https://xtar.netlify.app/post/%E9%9F%A9%E7%AB%8B%E5%88%9A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AC%AC1%E7%AB%A0%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E6%A6%82%E8%BF%B0/</guid>
       <description>1.1因特网 网络：许多计算机连接在一起 互联网：internet 许多网络连接在一起 因特网：Internet 全球最大的一个互联网 1.2 中国互联网 1.3 因</description>
     </item>
     

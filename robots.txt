@@ -1,2 +1,2 @@
 User-agent: *
-Sitemap: http://xtarblog.github.io/sitemap.xml
+Sitemap: https://xtar.netlify.app/sitemap.xml
